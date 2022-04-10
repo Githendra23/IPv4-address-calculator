@@ -1,4 +1,4 @@
-# IPv4-address-calculator
+# IPv4 address calculator
 
 Simple IPv4 address calculator that will calculate :
 - NetMask
