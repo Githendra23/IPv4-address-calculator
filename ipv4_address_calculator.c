@@ -3,7 +3,6 @@
 #include <conio.h>
 
 uint8_t ipByte0 = 0, ipByte1 = 0, ipByte2 = 0, ipByte3 = 0, ipMask = 0;
-
 uint32_t hostIPaddress = 0, netIPmask = 0, netIPaddress = 0, firstIPaddress = 0, lastIPaddress = 0, broadcastIPaddress = 0;
 
 int main(void)
