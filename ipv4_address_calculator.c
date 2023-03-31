@@ -2,26 +2,19 @@
 #include <stdint.h>
 #include <conio.h>
 
-uint8_t ipByte0 = 0;
-uint8_t ipByte1 = 0;
-uint8_t ipByte2 = 0;
-uint8_t ipByte3 = 0;
-uint8_t ipMask = 0;
+uint8_t ipByte0 = 0, ipByte1 = 0, ipByte2 = 0, ipByte3 = 0, ipMask = 0;
 
-uint32_t hostIPaddress = 0; 
-uint32_t netIPmask = 0;
-uint32_t netIPaddress = 0;
-uint32_t firstIPaddress = 0;
-uint32_t lastIPaddress = 0;
-uint32_t broadcastIPaddress = 0;
+uint32_t hostIPaddress = 0, netIPmask = 0, netIPaddress = 0, firstIPaddress = 0, lastIPaddress = 0, broadcastIPaddress = 0;
 
-int main(void) {
+int main(void)
+{
     printf("Please enter your IP address (XXX.XXX.XXX.XXX/XX): ");
     scanf("%hhu.%hhu.%hhu.%hhu/%hhu", &ipByte3, &ipByte2, &ipByte1, &ipByte0, &ipMask);
     
     hostIPaddress = ipByte0 + (ipByte1 << 8) + (ipByte2 << 16) + (ipByte3 << 24); 
     
-    for (int i = 31; i >= 32 - ipMask; i--) {
+    for (int i = 31; i >= 32 - ipMask; i--)
+    {
         netIPmask += 1 << i;
     }
 
